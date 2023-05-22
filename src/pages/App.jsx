@@ -10,6 +10,7 @@ import UsersPages from '@/pages/UsersPages'
 
 import { Footer, Header } from '@/features/layout'
 import './App.css'
+import { Alert } from 'react-bootstrap'
 
 const App = () => {
   // eslint-disable-next-line no-unused-vars
@@ -36,8 +37,14 @@ const App = () => {
 
   const [user, setUser] = useState(null)
 
+  const [message, setMessage] = useState(null)
+
   const login = (user) => {
     setUser(user)
+    setMessage(`welcome ${user}`)
+    setTimeout(() => {
+      setMessage(null)
+    }, 10000)
   }
 
   const match = useMatch('/notes/:id')
@@ -48,6 +55,9 @@ const App = () => {
   return (
     <div className="container">
       <Header user={user} />
+
+      {message && <Alert variant="success">{message}</Alert>}
+
       <main>
         <div>
           <Routes>
