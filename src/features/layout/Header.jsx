@@ -7,7 +7,7 @@ const Header = ({ user }) => {
   }
 
   return (
-    <Stack as="header" gap={3}>
+    <Stack as="header" gap={3} className="mb-5">
       <div className="mt-5">
         <h1>Notes Router Bootstrap</h1>
       </div>
