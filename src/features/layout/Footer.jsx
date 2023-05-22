@@ -1,9 +1,11 @@
+import { Container } from 'react-bootstrap'
+
 const Footer = () => {
   return (
-    <div>
+    <Container>
       <br />
       <em>Note app, Department of Computer Science 2023</em>
-    </div>
+    </Container>
   )
 }
 

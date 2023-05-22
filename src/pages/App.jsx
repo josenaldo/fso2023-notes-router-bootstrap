@@ -9,8 +9,7 @@ import NotesPage from '@/pages/NotesPage'
 import UsersPages from '@/pages/UsersPages'
 
 import { Footer, Header } from '@/features/layout'
-import './App.css'
-import { Alert } from 'react-bootstrap'
+import { Alert, Container } from 'react-bootstrap'
 
 const App = () => {
   // eslint-disable-next-line no-unused-vars
@@ -53,12 +52,16 @@ const App = () => {
     : null
 
   return (
-    <div className="container">
+    <div>
       <Header user={user} />
 
-      {message && <Alert variant="success">{message}</Alert>}
+      {message && (
+        <Container>
+          <Alert variant="success">{message}</Alert>
+        </Container>
+      )}
 
-      <main>
+      <Container as="main">
         <div>
           <Routes>
             <Route path="/notes/:id" element={<NotePage note={note} />} />
@@ -71,7 +74,7 @@ const App = () => {
             <Route path="/" element={<HomePage />} />
           </Routes>
         </div>
-      </main>
+      </Container>
       <Footer />
     </div>
   )
