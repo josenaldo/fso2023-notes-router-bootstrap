@@ -1,11 +1,12 @@
 import { useState } from 'react'
 
 import { Navigate, Route, Routes, useMatch } from 'react-router-dom'
-import Note from '@/pages/Note'
-import Notes from '@/pages/Notes'
-import Users from '@/pages/Users'
-import Login from '@/pages/Login'
-import Home from '@/pages/Home'
+
+import HomePage from '@/pages/HomePage'
+import LoginPage from '@/pages/LoginPage'
+import NotePage from '@/pages/NotePage'
+import NotesPage from '@/pages/NotesPage'
+import UsersPages from '@/pages/UsersPages'
 
 import { Footer, Header } from '@/features/layout'
 import './App.css'
@@ -50,14 +51,14 @@ const App = () => {
       <main>
         <div>
           <Routes>
-            <Route path="/notes/:id" element={<Note note={note} />} />
-            <Route path="/notes" element={<Notes notes={notes} />} />
+            <Route path="/notes/:id" element={<NotePage note={note} />} />
+            <Route path="/notes" element={<NotesPage notes={notes} />} />
             <Route
               path="/users"
-              element={user ? <Users /> : <Navigate replace to="/login" />}
+              element={user ? <UsersPages /> : <Navigate replace to="/login" />}
             />
-            <Route path="/login" element={<Login onLogin={login} />} />
-            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<LoginPage onLogin={login} />} />
+            <Route path="/" element={<HomePage />} />
           </Routes>
         </div>
       </main>

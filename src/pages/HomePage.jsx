@@ -1,4 +1,4 @@
-const Home = () => (
+const HomePage = () => (
   <div>
     <h2>TKTL notes app</h2>
     <p>
@@ -15,4 +15,4 @@ const Home = () => (
   </div>
 )
 
-export default Home
+export default HomePage

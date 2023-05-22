@@ -1,7 +1,7 @@
 import { Icon } from '@/features/ui'
-import styles from './Note.module.css'
+import styles from './NotePage.module.css'
 
-const Note = ({ note }) => {
+const NotePage = ({ note }) => {
   return (
     <article>
       <h2 className={styles.content}>
@@ -18,4 +18,4 @@ const Note = ({ note }) => {
   )
 }
 
-export default Note
+export default NotePage

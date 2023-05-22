@@ -1,4 +1,4 @@
-const Users = () => (
+const UsersPages = () => (
   <div>
     <h2>TKTL notes app</h2>
     <ul>
@@ -9,4 +9,4 @@ const Users = () => (
   </div>
 )
 
-export default Users
+export default UsersPages
